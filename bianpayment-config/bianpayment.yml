@@ -1,0 +1,43 @@
+spring: 
+  api: 
+    corporatecurrentaccount: 
+      context-path: /CorporateCurrentAccount/{corporatecurrentaccountId}/Retrieve
+      hosturl: v1/bian-3/core/payment/creditor/10.0.0//corporatecurrentaccount
+      jolt-filename: corporatecurrentaccount496617-jolt.json
+    financialgateway: 
+      context-path: /FinancialGateway/Initiate
+      hosturl: v1/bian-3/core/payment/creditor/10.0.0/sendpaymentmessage
+      jolt-filename: financialgateway225130-jolt.json
+    fraudevalution: 
+      context-path: /FraudEvaluation/Evaluate
+      hosturl: v1/bian-3/core/payment/creditor/10.0.0/fraudevalution
+      jolt-filename: fraudevalution696688-jolt.json
+    partyrefdatadirectory: 
+      context-path: /PartyReferenceDataDirectory/{partyreferencedatadirectoryId}/Retrieve
+      hosturl: v1/bian-3/core/payment/creditor/10.0.0/retrivecustomerdetails
+      jolt-filename: partyrefdatadirectory552056-jolt.json
+    paymentexecution: 
+      context-path: /PaymentExecution/Initiate
+      hosturl: v1/bian-3/core/payment/creditor/10.0.0/paymentexecution
+      jolt-filename: paymentexecution743822-jolt.json
+    paymentinitiation: 
+      context-path: /PaymentInitiation/Initiate
+      hosturl: v1/bian-3/core/payment/creditor/10.0.0/initpayment
+      jolt-filename: paymentinitiation661685-jolt.json
+    paymentorder: 
+      context-path: /PaymentOrder/Initiate
+      hosturl: v1/bian-3/core/payment/creditor/10.0.0/paymentorder
+      jolt-filename: paymentorder349314-jolt.json
+    paymentrailops: 
+      context-path: /PaymentRailOperations/Initiate
+      hosturl: v1/bian-3/core/payment/creditor/10.0.0/sendreqpayment
+      jolt-filename: paymentrailops525157-jolt.json
+    regularycompliance: 
+      context-path: /RegulatoryCompliance/Evaluate
+      hosturl: v1/bian-3/core/payment/creditor/10.0.0/conductchecks
+      jolt-filename: regularycompliance136188-jolt.json
+  datasource: 
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: ${mysql_pwd}
+    url: jdbc:mysql://${mysql_url}:3306/camunda
+    username: ${mysql_user}
